@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.daggerdemo"
+    namespace = "com.example.daggerfast"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.daggerdemo"
+        applicationId = "com.example.daggerfast"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

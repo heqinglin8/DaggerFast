@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DaggerDemo"
+rootProject.name = "DaggerFast"
 include(":app")
  
