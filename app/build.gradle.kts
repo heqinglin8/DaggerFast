@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.daggerfast"
+    namespace = "com.qilin.daggerfast"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.daggerfast"
+        applicationId = "com.qilin.daggerfast"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
