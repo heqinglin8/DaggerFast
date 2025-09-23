@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.qilin.base"
+    namespace = "com.qilin.core"
     compileSdk = 36
 
     defaultConfig {

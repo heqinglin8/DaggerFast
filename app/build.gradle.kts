@@ -63,7 +63,7 @@ dependencies {
     implementation(libs.squareup.retrofit2.converter.gson)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
-    implementation(project(":base"))
+    implementation(project(":core"))
     implementation(project(":module_user"))
 
     testImplementation(libs.junit)

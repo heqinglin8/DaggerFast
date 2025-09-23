@@ -21,5 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "DaggerFast"
 include(":app")
-include(":base")
+include(":core")
 include(":module_user")

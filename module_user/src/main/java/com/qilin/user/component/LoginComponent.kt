@@ -1,6 +1,6 @@
 package com.qilin.user.component
 
-import com.qilin.base.annotation.ActivityScope
+import com.qilin.core.annotation.ActivityScope
 import com.qilin.user.ui.login.LoginActivity
 import com.qilin.user.ui.login.LoginPhoneFragment
 import com.qilin.user.ui.login.LoginUsernameFragment

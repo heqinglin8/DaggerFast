@@ -1,4 +1,4 @@
-package com.qilin.base
+package com.qilin.core
 
 import org.junit.Test
 
