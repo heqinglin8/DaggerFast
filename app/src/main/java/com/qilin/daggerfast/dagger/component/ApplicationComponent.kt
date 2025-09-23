@@ -2,6 +2,7 @@ package com.qilin.daggerfast.dagger.component
 
 import com.qilin.daggerfast.dagger.module.NetworkModule
 import com.qilin.daggerfast.dagger.module.SubcomponentsModule
+import com.qilin.user.component.LoginComponent
 import dagger.Component
 import javax.inject.Singleton
 
