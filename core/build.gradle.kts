@@ -44,4 +44,7 @@ dependencies {
     //dagger
     implementation(libs.dagger.dagger)
     kapt(libs.dagger.compiler)
+
+    implementation(libs.squareup.retrofit2.retrofit)
+    implementation(libs.squareup.retrofit2.converter.gson)
 }

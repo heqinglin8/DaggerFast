@@ -7,11 +7,11 @@ import android.util.Patterns
 import androidx.lifecycle.viewModelScope
 import com.qilin.core.annotation.ActivityScope
 import com.qilin.user.R
-import com.qilin.user.data.LoginRepository
+import com.qilin.core.data.LoginRepository
 
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import com.qilin.user.data.Result
+import com.qilin.core.data.Result
 
 @ActivityScope
 class LoginViewModel @Inject constructor(private val loginRepository: LoginRepository) : ViewModel() {

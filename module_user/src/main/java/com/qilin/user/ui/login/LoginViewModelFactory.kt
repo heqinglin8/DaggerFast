@@ -3,10 +3,10 @@ package com.qilin.user.ui.login
 import android.content.ClipData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.qilin.user.data.LoginDataSource
-import com.qilin.user.data.LoginRepository
-import com.qilin.user.data.LoginService
-import com.qilin.user.data.model.LoggedInUser
+import com.qilin.core.data.LoginDataSource
+import com.qilin.core.data.LoginRepository
+import com.qilin.core.data.LoginService
+import com.qilin.core.data.model.LoggedInUser
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

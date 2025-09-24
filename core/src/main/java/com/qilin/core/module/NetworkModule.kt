@@ -1,6 +1,6 @@
-package com.qilin.daggerfast.dagger.module
+package com.qilin.core.module
 
-import com.qilin.user.data.LoginService
+import com.qilin.core.data.LoginService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

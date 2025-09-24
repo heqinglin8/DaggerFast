@@ -1,6 +1,6 @@
-package com.qilin.user.data
+package com.qilin.core.data
 
-import com.qilin.user.data.model.LoggedInUser
+import com.qilin.core.data.model.LoggedInUser
 import javax.inject.Inject
 import javax.inject.Singleton
 

@@ -1,4 +1,4 @@
-package com.qilin.user.data
+package com.qilin.core.data
 
 /**
  * A generic class that holds a value with its loading status.

@@ -1,17 +1,11 @@
 package com.qilin.daggerfast
 
 import android.app.Application
-import com.qilin.daggerfast.dagger.component.DaggerApplicationComponent
-import com.qilin.user.component.LoginComponent
-import com.qilin.user.provider.LoginComponentProvider
+import com.qilin.core.utils.CommDaggerUtil
 
-class MyApplication : LoginComponentProvider,Application(){
-    val appComponent = DaggerApplicationComponent.create()
+class MyApplication :Application(){
     override fun onCreate() {
+        CommDaggerUtil.init()
         super.onCreate()
-    }
-
-    override fun provideLoginComponent(): LoginComponent {
-        return appComponent.loginComponent().create()
     }
 }

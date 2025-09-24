@@ -9,9 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.qilin.core.utils.CommDaggerUtil
 import com.qilin.user.R
+import com.qilin.user.component.DaggerLoginComponent
 import com.qilin.user.component.LoginComponent
-import com.qilin.user.provider.LoginComponentProvider
 import javax.inject.Inject
 
 class LoginActivity : AppCompatActivity() {
@@ -24,7 +25,12 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var pagerAdapter: LoginPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        loginComponent = (applicationContext as LoginComponentProvider).provideLoginComponent()
+//        appComponent = (applicationContext as MyApplication).appComponent
+
+
+        // Creates a new instance of LoginComponent
+        // Injects the component to populate the @Inject fields
+        loginComponent = DaggerLoginComponent.factory().create(CommDaggerUtil.appComponent)
         loginComponent.inject(this)
         super.onCreate(savedInstanceState)
         Log.d("LoginActivity", "onCreate, loginViewModel: $loginViewModel")
