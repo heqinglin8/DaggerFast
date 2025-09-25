@@ -1,7 +1,7 @@
-package com.qilin.core.data
+package com.qilin.core.data.user
 
 import android.content.ClipData
-import com.qilin.core.data.model.LoggedInUser
+import com.qilin.core.data.user.model.LoggedInUser
 import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query

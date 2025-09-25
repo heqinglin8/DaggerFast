@@ -1,7 +1,7 @@
-package com.qilin.daggerfast.user.component
+package com.qilin.daggerfast.user.dagger.component
 
-import com.qilin.core.annotation.ActivityScope
-import com.qilin.core.component.AppComponent
+import com.qilin.core.dagger.annotation.ActivityScope
+import com.qilin.core.dagger.component.AppComponent
 import com.qilin.daggerfast.user.ui.login.LoginActivity
 import com.qilin.daggerfast.user.ui.login.LoginPhoneFragment
 import com.qilin.daggerfast.user.ui.login.LoginUsernameFragment

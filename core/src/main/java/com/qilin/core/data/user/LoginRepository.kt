@@ -1,6 +1,6 @@
-package com.qilin.core.data
+package com.qilin.core.data.user
 
-import com.qilin.core.data.model.LoggedInUser
+import com.qilin.core.data.user.model.LoggedInUser
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -29,25 +29,25 @@ class LoginRepository @Inject constructor(val dataSource: LoginDataSource, val l
         dataSource.logout()
     }
 
-    fun login(username: String, password: String): Result<LoggedInUser> {
+    fun login(username: String, password: String): com.qilin.core.data.Result<LoggedInUser> {
         // handle login
         val result = dataSource.login(username, password)
 
-        if (result is Result.Success) {
+        if (result is com.qilin.core.data.Result.Success) {
             setLoggedInUser(result.data)
         }
 
         return result
     }
 
-     suspend fun login2(username: String, password: String): Result<LoggedInUser> {
+     suspend fun login2(username: String, password: String): com.qilin.core.data.Result<LoggedInUser> {
         // handle login
         try {
             val result = loginService.login(username, password)
             setLoggedInUser(result)
-            return Result.Success(result)
+            return _root_ide_package_.com.qilin.core.data.Result.Success(result)
         }catch (e: Exception){
-            return Result.Error(e)
+            return _root_ide_package_.com.qilin.core.data.Result.Error(e)
         }
     }
 

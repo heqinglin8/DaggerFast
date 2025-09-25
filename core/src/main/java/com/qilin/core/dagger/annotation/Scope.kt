@@ -1,4 +1,4 @@
-package com.qilin.core.annotation
+package com.qilin.core.dagger.annotation
 
 import javax.inject.Scope
 

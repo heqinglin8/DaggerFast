@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
 import androidx.lifecycle.viewModelScope
-import com.qilin.core.annotation.ActivityScope
-import com.qilin.core.data.LoginRepository
+import com.qilin.core.dagger.annotation.ActivityScope
+import com.qilin.core.data.user.LoginRepository
 
 import kotlinx.coroutines.launch
 import javax.inject.Inject

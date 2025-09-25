@@ -3,10 +3,10 @@ package com.qilin.daggerfast.user.ui.login
 import android.content.ClipData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.qilin.core.data.LoginDataSource
-import com.qilin.core.data.LoginRepository
-import com.qilin.core.data.LoginService
-import com.qilin.core.data.model.LoggedInUser
+import com.qilin.core.data.user.LoginDataSource
+import com.qilin.core.data.user.LoginRepository
+import com.qilin.core.data.user.LoginService
+import com.qilin.core.data.user.model.LoggedInUser
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

@@ -1,9 +1,8 @@
-package com.qilin.core.component
+package com.qilin.core.dagger.component
 
-import com.qilin.core.data.LoginRepository
-import com.qilin.core.module.NetworkModule
+import com.qilin.core.data.user.LoginRepository
+import com.qilin.core.dagger.module.NetworkModule
 import dagger.Component
-import dagger.Provides
 import javax.inject.Singleton
 
 @Singleton

@@ -11,8 +11,8 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.qilin.core.utils.CommDaggerUtil
 import com.qilin.daggerfast.user.R
-import com.qilin.daggerfast.user.component.DaggerLoginComponent
-import com.qilin.daggerfast.user.component.LoginComponent
+import com.qilin.daggerfast.user.dagger.component.DaggerLoginComponent
+import com.qilin.daggerfast.user.dagger.component.LoginComponent
 import javax.inject.Inject
 
 class LoginActivity : AppCompatActivity() {

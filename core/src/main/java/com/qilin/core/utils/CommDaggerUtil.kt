@@ -1,8 +1,8 @@
 package com.qilin.core.utils
 
 import android.util.Log
-import com.qilin.core.component.AppComponent
-import com.qilin.core.component.DaggerAppComponent
+import com.qilin.core.dagger.component.AppComponent
+import com.qilin.core.dagger.component.DaggerAppComponent
 
 object CommDaggerUtil {
 
