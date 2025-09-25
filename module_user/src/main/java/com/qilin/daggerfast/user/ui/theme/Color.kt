@@ -1,4 +1,4 @@
-package com.qilin.user.ui.theme
+package com.qilin.daggerfast.user.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

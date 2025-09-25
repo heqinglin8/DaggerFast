@@ -1,4 +1,4 @@
-package com.qilin.user.ui.login
+package com.qilin.daggerfast.user.ui.login
 
 import android.os.Bundle
 import android.text.Editable
@@ -10,9 +10,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.qilin.core.utils.CommDaggerUtil
-import com.qilin.user.R
-import com.qilin.user.component.DaggerLoginComponent
-import com.qilin.user.component.LoginComponent
+import com.qilin.daggerfast.user.R
+import com.qilin.daggerfast.user.component.DaggerLoginComponent
+import com.qilin.daggerfast.user.component.LoginComponent
 import javax.inject.Inject
 
 class LoginActivity : AppCompatActivity() {

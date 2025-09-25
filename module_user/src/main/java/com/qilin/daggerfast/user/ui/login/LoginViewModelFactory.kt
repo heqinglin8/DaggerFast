@@ -1,4 +1,4 @@
-package com.qilin.user.ui.login
+package com.qilin.daggerfast.user.ui.login
 
 import android.content.ClipData
 import androidx.lifecycle.ViewModel

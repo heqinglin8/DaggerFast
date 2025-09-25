@@ -1,6 +1,5 @@
 package com.qilin.core.utils
 
-import android.app.Application
 import android.util.Log
 import com.qilin.core.component.AppComponent
 import com.qilin.core.component.DaggerAppComponent

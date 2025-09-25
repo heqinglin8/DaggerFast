@@ -1,10 +1,10 @@
-package com.qilin.user.component
+package com.qilin.daggerfast.user.component
 
 import com.qilin.core.annotation.ActivityScope
 import com.qilin.core.component.AppComponent
-import com.qilin.user.ui.login.LoginActivity
-import com.qilin.user.ui.login.LoginPhoneFragment
-import com.qilin.user.ui.login.LoginUsernameFragment
+import com.qilin.daggerfast.user.ui.login.LoginActivity
+import com.qilin.daggerfast.user.ui.login.LoginPhoneFragment
+import com.qilin.daggerfast.user.ui.login.LoginUsernameFragment
 import dagger.Component
 @ActivityScope
 @Component(dependencies = [AppComponent::class])

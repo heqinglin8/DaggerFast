@@ -9,13 +9,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DaggerFast">
         <activity
-            android:name="com.qilin.user.ui.login.LoginActivity"
+            android:name="com.qilin.daggerfast.user.ui.login.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.AppCompat.Light"
             />
         <activity
-            android:name=".MainActivity"
+            android:name="com.qilin.daggerfast.user.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.DaggerFast">

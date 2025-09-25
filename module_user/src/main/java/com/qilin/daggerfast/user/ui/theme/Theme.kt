@@ -1,6 +1,5 @@
-package com.qilin.user.ui.theme
+package com.qilin.daggerfast.user.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

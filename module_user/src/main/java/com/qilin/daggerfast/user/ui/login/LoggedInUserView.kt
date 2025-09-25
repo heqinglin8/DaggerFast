@@ -1,4 +1,4 @@
-package com.qilin.user.ui.login
+package com.qilin.daggerfast.user.ui.login
 
 /**
  * User details post authentication that is exposed to the UI

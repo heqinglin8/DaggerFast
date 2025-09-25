@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.qilin.user"
+    namespace = "com.qilin.daggerfast.user"
     compileSdk = 36
 
     defaultConfig {

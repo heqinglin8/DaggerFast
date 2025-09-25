@@ -1,4 +1,4 @@
-package com.qilin.user.ui.login
+package com.qilin.daggerfast.user.ui.login
 
 /**
  * Data validation state of the login form.

@@ -1,4 +1,4 @@
-package com.qilin.user.ui.login
+package com.qilin.daggerfast.user.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,12 +6,12 @@ import androidx.lifecycle.ViewModel
 import android.util.Patterns
 import androidx.lifecycle.viewModelScope
 import com.qilin.core.annotation.ActivityScope
-import com.qilin.user.R
 import com.qilin.core.data.LoginRepository
 
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import com.qilin.core.data.Result
+import com.qilin.daggerfast.user.R
 
 @ActivityScope
 class LoginViewModel @Inject constructor(private val loginRepository: LoginRepository) : ViewModel() {

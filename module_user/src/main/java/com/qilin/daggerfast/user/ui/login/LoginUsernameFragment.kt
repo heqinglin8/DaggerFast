@@ -1,4 +1,4 @@
-package com.qilin.user.ui.login
+package com.qilin.daggerfast.user.ui.login
 
 import android.app.Activity
 import android.content.Context
@@ -7,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.qilin.user.R
-import com.qilin.user.databinding.FragmentLoginUsernameBinding
+import com.qilin.daggerfast.user.R
+import com.qilin.daggerfast.user.databinding.FragmentLoginUsernameBinding
 import javax.inject.Inject
 
 class LoginUsernameFragment : Fragment() {

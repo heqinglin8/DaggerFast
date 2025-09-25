@@ -1,4 +1,4 @@
-package com.qilin.user
+package com.qilin.daggerfast
 
 import org.junit.Test
 

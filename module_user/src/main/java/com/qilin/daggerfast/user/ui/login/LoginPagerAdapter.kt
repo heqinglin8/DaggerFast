@@ -1,4 +1,4 @@
-package com.qilin.user.ui.login
+package com.qilin.daggerfast.user.ui.login
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
