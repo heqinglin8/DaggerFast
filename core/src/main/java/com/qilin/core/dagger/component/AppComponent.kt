@@ -1,14 +1,10 @@
 package com.qilin.core.dagger.component
 
-import com.qilin.core.data.user.LoginRepository
-import com.qilin.core.dagger.module.NetworkModule
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [NetworkModule::class])
-interface AppComponent {
-
-    fun loginRepository(): LoginRepository
+@Component
+interface AppComponent:AndroidBaseComponent {
 
 }

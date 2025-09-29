@@ -1,4 +1,4 @@
-package com.qilin.core.data
+package com.qilin.daggerfast.user.data
 
 /**
  * A generic class that holds a value with its loading status.

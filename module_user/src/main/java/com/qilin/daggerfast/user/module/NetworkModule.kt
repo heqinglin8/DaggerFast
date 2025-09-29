@@ -1,11 +1,13 @@
-package com.qilin.core.dagger.module
+package com.qilin.daggerfast.user.module
 
-import com.qilin.core.data.user.LoginService
+import com.qilin.core.dagger.annotation.UserScope
+import com.qilin.daggerfast.user.UserViewModel
+import com.qilin.daggerfast.user.data.user.LoginRepository
+import com.qilin.daggerfast.user.data.user.LoginService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Singleton
 
 @Module
 class NetworkModule {
@@ -13,7 +15,7 @@ class NetworkModule {
     // @Provides tell Dagger how to create instances of the type that this function
     // returns (i.e. LoginRetrofitService).
     // Function parameters are the dependencies of this type.
-    @Singleton
+    @UserScope
     @Provides
     fun provideLoginService(): LoginService {
         // Whenever Dagger needs to provide an instance of type LoginRetrofitService,

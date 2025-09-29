@@ -5,16 +5,17 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt")
+//    id("WMRouter")
 }
 
 android {
     namespace = "com.qilin.daggerfast"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.qilin.daggerfast"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -46,10 +47,21 @@ android {
 dependencies {
 
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx){
+        version {
+            strictly("2.6.2")
+        }
+    }
+    implementation(libs.androidx.lifecycle.livedata.core){
+        version {
+            strictly("2.6.2")
+        }
+    }
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui){
+        exclude(group = "androidx.lifecycle", module = "lifecycle-livedata")
+    }
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
@@ -57,8 +69,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.squareup.retrofit2.retrofit)
     implementation(libs.squareup.retrofit2.converter.gson)
     implementation(libs.kotlinx.coroutines.core)
@@ -71,11 +81,13 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.tooling){
+        exclude(group = "androidx.lifecycle", module = "lifecycle-livedata")
+    }
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     //dagger
     implementation(libs.dagger.dagger)
-    kapt(libs.dagger.compiler)
-
+    //router
+    kapt(libs.router.compiler)
 }

@@ -1,6 +1,7 @@
-package com.qilin.core.data.user
+package com.qilin.daggerfast.user.data.user
 
-import com.qilin.core.data.user.model.LoggedInUser
+import com.qilin.daggerfast.user.data.Result
+import com.qilin.daggerfast.user.data.user.model.LoggedInUser
 import java.io.IOException
 import java.util.UUID
 import javax.inject.Inject
@@ -10,13 +11,13 @@ import javax.inject.Inject
  */
 class LoginDataSource @Inject constructor(){
 
-    fun login(username: String, password: String): com.qilin.core.data.Result<LoggedInUser> {
+    fun login(username: String, password: String): Result<LoggedInUser> {
         try {
             // TODO: handle loggedInUser authentication
             val fakeUser = LoggedInUser(UUID.randomUUID().toString(), "Jane Doe")
-            return _root_ide_package_.com.qilin.core.data.Result.Success(fakeUser)
+            return Result.Success(fakeUser)
         } catch (e: Throwable) {
-            return _root_ide_package_.com.qilin.core.data.Result.Error(IOException("Error logging in", e))
+            return Result.Error(IOException("Error logging in", e))
         }
     }
 

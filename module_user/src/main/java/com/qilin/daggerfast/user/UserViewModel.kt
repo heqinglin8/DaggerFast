@@ -1,18 +1,19 @@
-package com.qilin.daggerfast.user.ui.login
+package com.qilin.daggerfast.user
 
+import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.util.Patterns
 import androidx.lifecycle.viewModelScope
+import com.qilin.daggerfast.user.data.Result
 import com.qilin.daggerfast.user.data.user.LoginRepository
-
+import com.qilin.daggerfast.user.ui.login.LoggedInUserView
+import com.qilin.daggerfast.user.ui.login.LoginFormState
+import com.qilin.daggerfast.user.ui.login.LoginResult
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import com.qilin.daggerfast.user.data.Result
-import com.qilin.daggerfast.user.R
 
-class LoginViewModel @Inject constructor(private val loginRepository: LoginRepository) : ViewModel() {
+class UserViewModel @Inject constructor(private val loginRepository: LoginRepository) : ViewModel() {
 
     private val _loginForm = MutableLiveData<LoginFormState>()
     val loginFormState: LiveData<LoginFormState> = _loginForm

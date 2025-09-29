@@ -47,4 +47,11 @@ dependencies {
 
     implementation(libs.squareup.retrofit2.retrofit)
     implementation(libs.squareup.retrofit2.converter.gson)
+    api(libs.router.router){
+        exclude (group= "com.android.support")
+    }
+
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.extensions)
 }

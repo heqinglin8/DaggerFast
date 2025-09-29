@@ -11,7 +11,9 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.qilin.daggerfast.user.LoginActivity
 import com.qilin.daggerfast.user.R
+import com.qilin.daggerfast.user.afterTextChanged
 import com.qilin.daggerfast.user.databinding.FragmentLoginUsernameBinding
 import javax.inject.Inject
 
@@ -27,7 +29,7 @@ class LoginUsernameFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        (activity as LoginActivity).loginComponent.inject(this)
+//        (activity as LoginActivity).loginComponent.inject(this)
 
         // Now you can access loginViewModel here and onCreateView too
         // (shared instance with the Activity and the other Fragment)

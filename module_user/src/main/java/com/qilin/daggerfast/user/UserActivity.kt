@@ -1,37 +1,30 @@
-package com.qilin.daggerfast.user.ui.login
+package com.qilin.daggerfast.user
 
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.qilin.daggerfast.user.R
-import com.qilin.daggerfast.user.UserViewModel
+import com.qilin.core.utils.getViewModel
+import com.qilin.daggerfast.user.ui.login.LoginPagerAdapter
 
 class LoginActivity : AppCompatActivity() {
 
-//    lateinit var loginComponent: LoginComponent
-//    @Inject
-    lateinit var userViewModel: UserViewModel
+    private lateinit var  userViewModel: UserViewModel
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
     private lateinit var pagerAdapter: LoginPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Creates a new instance of LoginComponent
-        // Injects the component to populate the @Inject fields
-//        loginComponent = DaggerLoginComponent.factory().create(CommDaggerUtil.appComponent)
-//        loginComponent.inject(this)
-        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
         super.onCreate(savedInstanceState)
-        Log.d("LoginActivity", "onCreate, userViewModel: $userViewModel")
         setContentView(R.layout.activity_login) // 创建对应的布局文件
-
+//        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+        userViewModel = getViewModel<UserViewModel>()
         tabLayout = findViewById(R.id.tab_layout_login)
         viewPager = findViewById(R.id.view_pager_login)
 
