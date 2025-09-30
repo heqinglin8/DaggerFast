@@ -1,4 +1,4 @@
-package com.qilin.daggerfast.user.data.user.model
+package com.qilin.core.data.user.model
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

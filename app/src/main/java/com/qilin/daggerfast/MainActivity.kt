@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.qilin.daggerfast.ui.theme.DaggerDemoTheme
-import com.qilin.daggerfast.user.LoginActivity
+import com.qilin.daggerfast.user.UserActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
                                      startActivity(
                                          Intent(
                                              this@MainActivity,
-                                             LoginActivity::class.java
+                                             UserActivity::class.java
                                          )
                                      )
                                 }

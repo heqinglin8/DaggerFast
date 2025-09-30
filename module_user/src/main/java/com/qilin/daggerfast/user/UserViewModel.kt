@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.qilin.daggerfast.user.data.Result
-import com.qilin.daggerfast.user.data.user.LoginRepository
+import com.qilin.core.data.Result
+import com.qilin.core.data.user.LoginRepository
 import com.qilin.daggerfast.user.ui.login.LoggedInUserView
 import com.qilin.daggerfast.user.ui.login.LoginFormState
 import com.qilin.daggerfast.user.ui.login.LoginResult

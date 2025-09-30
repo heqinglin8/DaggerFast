@@ -50,6 +50,8 @@ dependencies {
     api(libs.router.router){
         exclude (group= "com.android.support")
     }
+    //router
+    kapt(libs.router.compiler)
 
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)

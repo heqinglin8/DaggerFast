@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import com.qilin.core.BaseModuleLifeCycle
+import com.qilin.core.utils.CommDaggerUtil
 import com.sankuai.waimai.router.Router
 import com.sankuai.waimai.router.common.DefaultRootUriHandler
 import com.sankuai.waimai.router.common.PageAnnotationHandler
@@ -32,6 +33,7 @@ class MyApplication :Application(){
     }
 
     override fun onCreate() {
+        CommDaggerUtil.init()
         initRouter(this)
         Router.getAllServices(BaseModuleLifeCycle::class.java).apply {
             this.forEach {

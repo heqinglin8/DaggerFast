@@ -1,7 +1,6 @@
 package com.qilin.core.utils
 
 import android.util.Log
-import com.qilin.core.dagger.component.AndroidBaseComponent
 import com.qilin.core.dagger.component.AppComponent
 import com.qilin.core.dagger.component.DaggerAppComponent
 
@@ -14,7 +13,7 @@ object CommDaggerUtil {
         Log.d(TAG, "init")
         val appComponent = DaggerAppComponent.create()
         this.mComponent = appComponent
-        AndroidBaseComponent.injectComponent(appComponent)
+//        AndroidBaseComponent.injectComponent(appComponent)
         Log.d(TAG, "injectComponent appComponent:$appComponent")
     }
 

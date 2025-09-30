@@ -5,11 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
 import androidx.lifecycle.viewModelScope
-import com.qilin.daggerfast.user.data.user.LoginRepository
+import com.qilin.core.data.user.LoginRepository
 
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import com.qilin.daggerfast.user.data.Result
+import com.qilin.core.data.Result
 import com.qilin.daggerfast.user.R
 
 class LoginViewModel @Inject constructor(private val loginRepository: LoginRepository) : ViewModel() {

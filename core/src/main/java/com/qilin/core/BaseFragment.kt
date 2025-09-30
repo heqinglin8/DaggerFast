@@ -7,8 +7,8 @@ class BaseFragment:Fragment() {
     val baseActivity: InjectActivity
         get() = requireActivity() as InjectActivity
 
-    val factory by lazy {
-        baseActivity.factory
-    }
+//    val factory by lazy {
+//        baseActivity.factory
+//    }
 
 }

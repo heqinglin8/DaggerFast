@@ -11,8 +11,9 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.qilin.daggerfast.user.LoginActivity
 import com.qilin.daggerfast.user.R
+import com.qilin.daggerfast.user.UserActivity
+import com.qilin.daggerfast.user.UserViewModel
 import com.qilin.daggerfast.user.afterTextChanged
 import com.qilin.daggerfast.user.databinding.FragmentLoginUsernameBinding
 import javax.inject.Inject
@@ -24,8 +25,9 @@ class LoginUsernameFragment : Fragment() {
     }
 
     private lateinit var binding: FragmentLoginUsernameBinding
-    @Inject
-    lateinit var loginViewModel: LoginViewModel
+    val loginViewModel: UserViewModel  by lazy {
+        (activity as UserActivity).userViewModel
+    }
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
