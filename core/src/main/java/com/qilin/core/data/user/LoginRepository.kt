@@ -1,6 +1,5 @@
 package com.qilin.core.data.user
 
-import com.qilin.core.dagger.annotation.UserScope
 import com.qilin.core.data.Result
 import com.qilin.core.data.user.model.LoggedInUser
 import javax.inject.Inject

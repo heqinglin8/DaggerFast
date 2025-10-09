@@ -3,7 +3,6 @@ package com.qilin.daggerfast.user.dagger.component
 import com.qilin.core.dagger.annotation.UserScope
 import com.qilin.core.dagger.component.AppComponent
 import com.qilin.daggerfast.user.UserActivity
-import com.qilin.core.data.user.LoginRepository
 import com.qilin.daggerfast.user.module.UserViewModelModule
 import dagger.Component
 

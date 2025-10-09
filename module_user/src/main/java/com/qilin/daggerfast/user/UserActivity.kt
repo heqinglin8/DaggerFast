@@ -21,7 +21,9 @@ class UserActivity : AppCompatActivity() {
     private lateinit var pagerAdapter: LoginPagerAdapter
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
-    lateinit var userViewModel: UserViewModel
+    val userViewModel: UserViewModel by lazy {
+        ViewModelProvider(this, viewModelFactory)[UserViewModel::class.java]
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         UserDaggerUtil.inject(this)
@@ -30,7 +32,7 @@ class UserActivity : AppCompatActivity() {
 //        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
         Log.d("UserActivity", "onCreate, viewModelFactory: $viewModelFactory")
         // 再创建 ViewModel
-        userViewModel = ViewModelProvider(this, viewModelFactory)[UserViewModel::class.java]
+//        userViewModel = ViewModelProvider(this, viewModelFactory)[UserViewModel::class.java]
         Log.d("UserActivity", "onCreate, userViewModel: $userViewModel")
         tabLayout = findViewById(R.id.tab_layout_login)
         viewPager = findViewById(R.id.view_pager_login)

@@ -1,6 +1,5 @@
 package com.qilin.core.module
 
-import com.qilin.core.dagger.annotation.UserScope
 import com.qilin.core.data.user.LoginService
 import dagger.Module
 import dagger.Provides
