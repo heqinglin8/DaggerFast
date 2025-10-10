@@ -20,6 +20,6 @@ interface UserComponent {
     // satisfy all the dependencies of the fields that UserModuleApiImpl is requesting.
 //    fun inject(userModule: UserModuleApiImpl)
 
-    fun inject(activity: UserActivity)
+//    fun inject(activity: UserActivity)
 
 }

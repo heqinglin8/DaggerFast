@@ -1,14 +1,5 @@
 package com.qilin.core.utils
 
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import com.qilin.core.BaseFragment
-import com.qilin.core.InjectActivity
-import androidx.lifecycle.ViewModelProviders
-
 //inline fun <reified T : ViewModel> FragmentActivity.getViewModel(
 //    factory: ViewModelProvider.Factory? = null): T {
 //    val myFactory = factory ?: (this as? InjectActivity)?.factory

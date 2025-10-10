@@ -1,9 +1,7 @@
 package com.qilin.daggerfast.user.module
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.qilin.core.dagger.annotation.ViewModelKey
-import com.qilin.core.dagger.viewmodel.AppViewModelFactory
 import com.qilin.daggerfast.user.UserViewModel
 import com.qilin.daggerfast.user.ui.login.LoginViewModel
 import dagger.Binds
@@ -25,7 +23,4 @@ abstract class UserViewModelModule {
     @ViewModelKey(LoginViewModel::class)
     abstract fun bindLoginViewModel(vm: LoginViewModel): ViewModel
 
-    // 绑定全局工厂
-    @Binds
-    abstract fun bindViewModelFactory(factory: AppViewModelFactory): ViewModelProvider.Factory
 }
