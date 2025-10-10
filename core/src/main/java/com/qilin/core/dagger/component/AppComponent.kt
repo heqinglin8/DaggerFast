@@ -2,6 +2,7 @@ package com.qilin.core.dagger.component
 
 import androidx.lifecycle.ViewModelProvider
 import com.qilin.core.InjectActivity
+import com.qilin.core.InjectComponentActivity
 import com.qilin.core.data.user.LoginRepository
 import com.qilin.core.module.CommViewModelModule
 import com.qilin.core.module.NetworkModule
@@ -16,5 +17,7 @@ interface AppComponent {
     fun loginRepository(): LoginRepository
 
     fun inject(activity: InjectActivity)
+
+    fun inject(activity: InjectComponentActivity)
 
 }

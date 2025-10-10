@@ -1,11 +1,35 @@
 package com.qilin.core.utils
 
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import com.qilin.core.InjectActivity
+import com.qilin.core.InjectComponentActivity
+import java.lang.IllegalStateException
+
 //inline fun <reified T : ViewModel> FragmentActivity.getViewModel(
 //    factory: ViewModelProvider.Factory? = null): T {
 //    val myFactory = factory ?: (this as? InjectActivity)?.factory
 //    return ViewModelProviders.of(this,
 //        myFactory ?: AndroidBaseComponent.viewModelFactory()).get(T::class.java)
 //}
+
+inline fun <reified T : ViewModel> InjectActivity.getViewModel(
+    factory: ViewModelProvider.Factory? = this.viewModelFactory): T {
+    if (factory == null){
+        throw IllegalArgumentException("factory should not be null")
+    }
+    return ViewModelProvider(this, factory)[T ::class.java]
+}
+
+inline fun <reified T : ViewModel> InjectComponentActivity.getViewModel(
+    factory: ViewModelProvider.Factory? = this.viewModelFactory): T {
+    if (factory == null){
+        throw IllegalArgumentException("factory should not be null")
+    }
+    return ViewModelProvider(this, viewModelFactory)[T ::class.java]
+}
+
+
 //
 //inline fun <reified T : ViewModel> AppCompatActivity.getViewModel(
 //    factory: ViewModelProvider.Factory? = null): T {

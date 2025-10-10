@@ -11,9 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.qilin.core.InjectComponentActivity
 import com.qilin.daggerfast.user.ui.theme.DaggerFastTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : InjectComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

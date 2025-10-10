@@ -5,11 +5,11 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.EditText
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.qilin.core.InjectActivity
+import com.qilin.core.utils.getViewModel
 import com.qilin.daggerfast.user.ui.login.LoginPagerAdapter
 
 class UserActivity : InjectActivity() {
@@ -17,13 +17,12 @@ class UserActivity : InjectActivity() {
     private lateinit var viewPager: ViewPager2
     private lateinit var pagerAdapter: LoginPagerAdapter
     val userViewModel: UserViewModel by lazy {
-        ViewModelProvider(this, viewModelFactory)[UserViewModel::class.java]
+        getViewModel<UserViewModel>()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login) // 创建对应的布局文件
-//        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
         Log.d("UserActivity", "onCreate, viewModelFactory: $viewModelFactory，userViewModel: $userViewModel")
         tabLayout = findViewById(R.id.tab_layout_login)
         viewPager = findViewById(R.id.view_pager_login)

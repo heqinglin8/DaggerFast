@@ -2,6 +2,7 @@ package com.qilin.core.utils
 
 import android.util.Log
 import com.qilin.core.InjectActivity
+import com.qilin.core.InjectComponentActivity
 import com.qilin.core.dagger.component.AppComponent
 import com.qilin.core.dagger.component.DaggerAppComponent
 
@@ -22,5 +23,7 @@ object CommDaggerUtil {
         get() = mComponent
 
     fun inject(activity: InjectActivity) = mComponent.inject(activity)
+
+    fun inject(activity: InjectComponentActivity) = mComponent.inject(activity)
 
 }
