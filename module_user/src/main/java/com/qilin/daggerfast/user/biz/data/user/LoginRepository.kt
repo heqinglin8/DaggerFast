@@ -1,15 +1,15 @@
-package com.qilin.core.data.user
+package com.qilin.daggerfast.user.biz.data.user
 
+import com.qilin.core.dagger.annotation.ModuleScope
 import com.qilin.core.data.Result
-import com.qilin.core.data.user.model.LoggedInUser
+import com.qilin.daggerfast.user.biz.data.user.model.LoggedInUser
 import javax.inject.Inject
-import javax.inject.Singleton
 
 /**
  * Class that requests authentication and user information from the remote data source and
  * maintains an in-memory cache of login status and user credentials information.
  */
-@Singleton
+@ModuleScope
 class LoginRepository @Inject constructor(val dataSource: LoginDataSource, val loginService: LoginService) {
 
     // in-memory cache of the loggedInUser object

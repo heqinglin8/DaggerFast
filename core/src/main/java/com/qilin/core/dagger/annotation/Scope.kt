@@ -10,8 +10,9 @@ import kotlin.reflect.KClass
  */
 // Definition of a custom scope called UserScope
 @Scope
-@Retention(value = AnnotationRetention.RUNTIME)
-annotation class UserScope
+@MustBeDocumented
+@Retention(AnnotationRetention.RUNTIME)
+annotation class ModuleScope
 
 // Definition of a custom scope called ActivityScope
 @Scope

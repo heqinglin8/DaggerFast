@@ -5,6 +5,7 @@ import com.qilin.core.InjectActivity
 import com.qilin.core.InjectComponentActivity
 import com.qilin.core.dagger.component.AppComponent
 import com.qilin.core.dagger.component.DaggerAppComponent
+import com.qilin.core.dagger.viewmodel.AppViewModelFactory
 
 object CommDaggerUtil {
 
@@ -21,6 +22,9 @@ object CommDaggerUtil {
 
     val appComponent
         get() = mComponent
+
+    val appViewModelFactory: AppViewModelFactory
+        get() = mComponent.viewModelFactory() as AppViewModelFactory
 
     fun inject(activity: InjectActivity) = mComponent.inject(activity)
 

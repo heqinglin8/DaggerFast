@@ -1,7 +1,7 @@
-package com.qilin.core.data.user
+package com.qilin.daggerfast.user.biz.data.user
 
 import com.qilin.core.data.Result
-import com.qilin.core.data.user.model.LoggedInUser
+import com.qilin.daggerfast.user.biz.data.user.model.LoggedInUser
 import java.io.IOException
 import java.util.UUID
 import javax.inject.Inject

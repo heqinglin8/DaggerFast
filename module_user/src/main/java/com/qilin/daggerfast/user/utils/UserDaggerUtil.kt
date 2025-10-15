@@ -10,6 +10,7 @@ object UserDaggerUtil {
 
     fun init(){
         userComponent = DaggerUserComponent.factory().create(CommDaggerUtil.appComponent)
+        CommDaggerUtil.appViewModelFactory.add(userComponent.provideViewModuleFactory().creators)
     }
 
 //    fun inject(userModule: UserModuleApiImpl) = userComponent.inject(userModule)
