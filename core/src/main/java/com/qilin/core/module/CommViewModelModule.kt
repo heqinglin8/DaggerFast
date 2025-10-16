@@ -8,6 +8,7 @@ import com.qilin.core.dagger.viewmodel.AppViewModelFactory
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import javax.inject.Singleton
 
 @Module
 abstract class CommViewModelModule {
@@ -20,5 +21,6 @@ abstract class CommViewModelModule {
 
     // 绑定全局工厂
     @Binds
+    @Singleton
     abstract fun bindViewModelFactory(factory: AppViewModelFactory): ViewModelProvider.Factory
 }
